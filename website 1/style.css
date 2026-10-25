@@ -1,0 +1,100 @@
+:root {
+  --navy: #101a2b;
+  --card: #1d2a40;
+  --blue: #70b7e8;
+  --gold: #f2c879;
+  --text: #f3f5fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 50px 20px;
+  background: var(--navy);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+body > * {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo { font-size: clamp(40px, 8vw, 64px); }
+
+
+#intro {
+  margin-bottom: 40px;
+  color: #c1cada;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+h2{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#difficulty {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+button {
+  padding: 14px 20px;
+  border: 2px solid #40516c;
+  border-radius: 12px;
+  background: #354b6b;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { border-color: var(--blue); }
+
+#Generate {
+  background: var(--blue);
+  color: var(--navy);
+}
+
+.card {
+  max-width: 780px;
+  margin: 32px auto 0;
+  padding: 75px;
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.card p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+#title {
+  color: var(--blue);
+  font-size: 30px;
+}
+
+#bonus {
+  margin-bottom: 0;
+  color: var(--gold);
+}
+
+@media (max-width: 560px) {
+  body { padding: 36px 16px; }
+  #difficulty button { width: calc(50% - 6px); }
+  #Generate { width: 100%; }
+}
+
+
+#difficulty button.selected {
+  border-color: var(--gold);
+  background: #435878;
+}
